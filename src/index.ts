@@ -5,7 +5,7 @@ const app = new Hono();
 const port = 6565;
 
 app.get("/", (c) => {
-  return c.text("Hello To Open Exchange API! and go /rates for api endpoint");
+  return c.text("Go to /rates for api endpoint");
 });
 
 app.get("/rates", async (ctx) => {
@@ -54,8 +54,6 @@ app.onError((err, c) => {
   console.error("Application error:", err);
   return c.json({ error: "Internal Server Error" }, 500);
 });
-
-// TODO: write tests for the particular endpoint and parameterized query.
 
 export default {
   port,

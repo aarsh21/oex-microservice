@@ -5,6 +5,7 @@ This is a simple microservice that provides exchange rates for various currencie
 ## Prerequisites
 
 - Bun runtime
+- [Hono](https://hono.dev/)
 - An API key from Open Exchange Rates
 
 ## Setup
@@ -28,7 +29,15 @@ The service will be available at `http://localhost:6565`.
 - GET `/rates`: Returns exchange rates for all available currencies
 - GET `/rates?currency=XXX`: Returns the exchange rate for a specific currency (e.g., XXX)
 
-#### backend assignment
+## Running tests
+
+Run the tests with:
+
+```bash
+bun test
+```
+
+### backend assignment
 
 - [x] Using a backend framework/language of your choice, create a simple microservice that exposes a single GET endpoint /rates which returns a response for the exchange rate of 1 USD to a list of all available currencies:
 
