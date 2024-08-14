@@ -1,15 +1,29 @@
+import { config } from "dotenv";
+
+config();
+
+const OPEN_EXCHANGE_KEY = process.env.OPEN_EXCHANGE_KEY;
+const BASE_URL = "https://openexchangerates.org/api/";
+
 export async function getCurrencies() {
   try {
-    const response = await fetch(
-      "https://openexchangerates.org/api/currencies.json",
-    );
+    const response = await fetch(`${BASE_URL}/currencies.json`);
     const data = await response.json();
-    console.table(data);
     return response.ok ? data : null;
   } catch (err) {
     console.error("Error fetching currencies:", err);
     return null;
   }
 }
-
-// TODO:fetch latest exchange rates.
+export async function getLatestRates() {
+  try {
+    const response = await fetch(
+      `${BASE_URL}/latest.json?app_id=${OPEN_EXCHANGE_KEY}`,
+    );
+    const data = await response.json();
+    console.log(data);
+    return response.ok ? data : null;
+  } catch (err) {
+    console.error("Error fetching rates:", err);
+  }
+}

@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import { getCurrencies } from "./utils";
+import { getCurrencies, getLatestRates } from "./utils";
 
 const app = new Hono();
 const port = 6565;
@@ -9,6 +9,9 @@ app.get("/", (c) => {
 });
 
 getCurrencies();
+getLatestRates();
+
+// TODO: create endpoint called /rates.
 
 export default {
   port,
