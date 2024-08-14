@@ -15,7 +15,7 @@ app.get("/rates", async (ctx) => {
       getLatestRates(),
     ]);
 
-    // FIXME: fix rates returning null for all.
+    // TODO: better error handling as mentioned by assignment.
 
     const result = [];
     for (const [symbol, name] of Object.entries(currencies)) {
