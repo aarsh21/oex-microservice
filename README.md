@@ -4,9 +4,9 @@ This is a simple microservice that provides exchange rates for various currencie
 
 ## Prerequisites
 
-- Bun runtime
+- [Bun runtime](https://bun.sh/)
 - [Hono](https://hono.dev/)
-- An API key from Open Exchange Rates
+- [An API key from Open Exchange Rates](https://openexchangerates.org/)
 
 ## Setup
 
@@ -36,6 +36,8 @@ Run the tests with:
 ```bash
 bun test
 ```
+
+---
 
 ### backend assignment
 
