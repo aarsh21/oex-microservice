@@ -29,7 +29,7 @@
 - [x] Query the latest exchange rates for all supported currencies using the relevant endpoint.
 - [x] Generate a combined response that includes both currency names, symbols, and their corresponding latest exchange rates.
 - [x] Ensure that if a supported currency does not have a latest rate, it returns a `null` value for the rate.
-- [ ] Handle API errors by returning a `503 Service Unavailable` response if the Open Exchange Rates API is unavailable or experiences an error.
+- [x] Handle API errors by returning a `503 Service Unavailable` response if the Open Exchange Rates API is unavailable or experiences an error.
 - [ ] Introduce a GET parameter to this GET endpoint (eg: /rates?currency=AED) to filter just the queried currency in the response. If the queried currency is not supported, your endpoint should return a 404 Not Found response.
 
 ```json
@@ -46,13 +46,13 @@
 
 To install dependencies:
 
-```sh
+```bash
 bun install
 ```
 
 To run:
 
-```sh
+```bash
 bun run dev
 ```
 
