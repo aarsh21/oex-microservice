@@ -1,4 +1,34 @@
-# backend assignment
+# Exchange Rates Microservice
+
+This is a simple microservice that provides exchange rates for various currencies against USD.
+
+## Prerequisites
+
+- Bun runtime
+- An API key from Open Exchange Rates
+
+## Setup
+
+1. Clone this repository
+2. Run `bun install` to install dependencies
+3. Copy `.env.example` to `.env` and add your Open Exchange Rates API key
+
+## Running the service
+
+Run the service with:
+
+```bash
+bun run dev
+```
+
+The service will be available at `http://localhost:6565`.
+
+## Endpoints
+
+- GET `/rates`: Returns exchange rates for all available currencies
+- GET `/rates?currency=XXX`: Returns the exchange rate for a specific currency (e.g., XXX)
+
+#### backend assignment
 
 - [x] Using a backend framework/language of your choice, create a simple microservice that exposes a single GET endpoint /rates which returns a response for the exchange rate of 1 USD to a list of all available currencies:
 
@@ -43,17 +73,3 @@
   ]
 }
 ```
-
-To install dependencies:
-
-```bash
-bun install
-```
-
-To run:
-
-```bash
-bun run dev
-```
-
-open <http://localhost:3000>

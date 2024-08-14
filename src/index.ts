@@ -55,6 +55,8 @@ app.onError((err, c) => {
   return c.json({ error: "Internal Server Error" }, 500);
 });
 
+// TODO: write tests for the particular endpoint and parameterized query.
+
 export default {
   port,
   fetch: app.fetch,
