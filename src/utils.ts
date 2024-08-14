@@ -21,7 +21,6 @@ export async function getLatestRates() {
       `${BASE_URL}/latest.json?app_id=${OPEN_EXCHANGE_KEY}`,
     );
     const data = await response.json();
-    console.log(data);
     return response.ok ? data : null;
   } catch (err) {
     console.error("Error fetching rates:", err);
